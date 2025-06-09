@@ -13,10 +13,11 @@ Alpine.js offers you the reactive and declarative nature of big frameworks like 
 ## 🛠 Features
 ### 🧠 Declarative syntax (x-data, x-model, x-show, etc.)
 
-⚡ Reactive data binding
-🪶 Lightweight (10kB gzipped)
-🧩 No build tools required
-🛡️ Works perfectly with Tailwind CSS
+### ✨ Features
+- ⚡ Reactive data binding – Automatically update the DOM when data changes.
+- 🪶 Lightweight – Only ~10kB gzipped.
+- 🧩 No build tools required – Works right out of the box via CDN.
+- 🛡️ Tailwind CSS friendly – Designed to integrate seamlessly with Tailwind utility classes.
 
 ### 🚀 Getting Started
 ✅ Include Alpine.js
