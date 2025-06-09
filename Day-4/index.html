@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alpine.js x-model Demo</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+  <div x-data="{
+    name: '',
+    message: '',
+    accepted: false,
+    choice: '',
+    country: '',
+    lazyName: '',
+    age: null,
+    trimmedName: ''
+  }" >
+
+    <h2>Text Input</h2>
+    <input type="text" x-model="name" placeholder="Your name">
+    <p>Name: <span x-text="name"></span></p>
+
+    <h2>Textarea</h2>
+    <textarea x-model="message" placeholder="Your message"></textarea>
+    <p>Message: <span x-text="message"></span></p>
+
+    <h2>Checkbox</h2>
+    <label>
+      <input type="checkbox" x-model="accepted">
+      I accept
+    </label>
+    <p>Accepted: <span x-text="accepted"></span></p>
+
+    <h2>Radio Buttons</h2>
+    <label><input type="radio" x-model="choice" value="A"> Option A</label>
+    <label><input type="radio" x-model="choice" value="B"> Option B</label>
+    <p>Choice: <span x-text="choice"></span></p>
+
+    <h2>Select Dropdown</h2>
+    <select x-model="country">
+      <option value="">-- Choose --</option>
+      <option value="Bangladesh">Bangladesh</option>
+      <option value="Canada">Canada</option>
+    </select>
+    <p>Selected Country: <span x-text="country"></span></p>
+
+    <h2>Using Modifiers</h2>
+
+    <p><strong>.lazy</strong></p>
+    <input type="text" x-model.lazy="lazyName" placeholder="Type and unfocus">
+    <p>Lazy Name: <span x-text="lazyName"></span></p>
+
+    <p><strong>.number</strong></p>
+    <input type="number" x-model.number="age" placeholder="Enter age">
+    <p>Age (number): <span x-text="age"></span> </p>
+
+    <p><strong>.trim</strong></p>
+    <input type="text" x-model.trim="trimmedName" placeholder="Trim whitespace">
+    <p>Trimmed: "<span x-text="trimmedName"></span>"</p>
+
+  </div>
+</body>
+</html>

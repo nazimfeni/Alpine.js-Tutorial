@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alpine.js x-model Demo</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<body>
+   
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.store('app', { theme: 'light' });
+  });
+</script>
+
+<div x-data>
+  <button @click="$store.app.theme = 'dark'">Dark Mode</button>
+  <p x-text="$store.app.theme"></p>
+</div>
+</body>
+</html>

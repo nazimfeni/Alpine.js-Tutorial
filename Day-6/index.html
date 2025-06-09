@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alpine.js Theme with localStorage</title>
+  <script defer src="https://unpkg.com/alpinejs"></script>
+  <style>
+    body.light { background-color: #fff; color: #000; }
+    body.dark { background-color: #111; color: #fff; }
+  </style>
+</head>
+<body x-data x-init="$watch('$store.app.theme', value => {
+    localStorage.setItem('theme', value)
+    document.body.className = value
+})" :class="$store.app.theme">
+
+<script>
+  document.addEventListener('alpine:init', () => {
+    // Load theme from localStorage or default to 'light'
+    const savedTheme = localStorage.getItem('theme') || 'light';
+
+    Alpine.store('app', {
+      theme: savedTheme
+    });
+
+    // Set body class on load
+    document.body.className = savedTheme;
+  });
+</script>
+
+<div>
+  <button @click="$store.app.theme = 'light'">Light Mode</button>
+  <button @click="$store.app.theme = 'dark'">Dark Mode</button>
+  <p>Current theme: <strong x-text="$store.app.theme"></strong></p>
+</div>
+
+</body>
+</html>

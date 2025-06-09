@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine JS</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+ 
+  <div x-data="{ msg: 'Hello Nazim', show: false }">
+  
+  <button @mouseover="show = !show">Press</button>
+
+  <p x-show="show" x-text="msg"></p>
+</div>
+<br>
+<form x-data="{ msg: '' }" @submit.prevent="alert('Form submitted!')">
+  <input type="text" x-model="msg" placeholder="Type something" />
+  <button type="submit">Submit</button>
+</form>
+
+<br>
+<div x-data="{ name: '' }">
+  <input type="text" x-model="name" placeholder="Enter your name" />
+  <p>Hello, <span x-text="name"></span>!</p>
+</div>
+</body>
+
+</html>
