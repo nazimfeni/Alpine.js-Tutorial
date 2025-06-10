@@ -36,3 +36,6 @@
 | `.debounce.500ms` | Debounce event, waits 500ms after last event     | `@input.debounce.500ms="search"` |
 | `.self`           | Fires only if event target is the element itself | `@click.self="close()"`        |
 | `.away`           | Fires when click happens outside element          | `@click.away="close()"`        |
+
+### x-model
+x-model is used in Alpine.js to bind a form input element’s value to a data property, enabling two-way data binding — meaning the input updates the data, and the data updates the input.
