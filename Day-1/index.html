@@ -1,18 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Alpine JS</title>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.7/dist/cdn.min.js" defer></script>
 </head>
 
 <body>
-    <div x-data="{ name: 'Nazim' }">
-        <h2><span x-text="name"></span> </h2>
+    <div x-data="{open: false}" class="m-4">
+        <button @click="open=!open"
+            class="bg-blue-600 px-4 py-2 rounded-lg text-white hover:bg-blue-800 transition duration 200">Toggle</button>
+        <p x-show="open">Toggle Content</p>
     </div>
+
+    <div x-data="{count: 0}">
+        <p>Count: <span x-text="count"></span></p>
+        <button @click="count++"
+            class="bg-blue-600 px-4 py-2 rounded-lg text-white hover:bg-blue-800 transition duration 200">Increase</button>
+    </div>
+
+    <div x-data="{ open: 0 }" class="max-w-md mx-auto mt-10 space-y-4">
+        <div>
+            <button @click="open === 1 ? open = 0 : open = 1" class="font-bold w-full text-left bg-gray-200 p-2">
+                What is Alpine.js?
+            </button>
+            <div x-show="open === 1" class="p-2 bg-gray-100">
+                Alpine.js is a lightweight JavaScript framework for composing behavior directly in your HTML.
+            </div>
+        </div>
+
+        <div>
+            <button @click="open === 2 ? open = 0 : open = 2" class="font-bold w-full text-left bg-gray-200 p-2">
+                Why use Alpine.js?
+            </button>
+            <div x-show="open === 2" class="p-2 bg-gray-100">
+                It's ideal for simple interactivity without the need for full frameworks like Vue or React.
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
 
 </html>
