@@ -1,4 +1,4 @@
-## Alpinejs
+## Alpinejs Tutorial
 
 ### 🗓️ Day 1: Introduction to Alpine.js
 
