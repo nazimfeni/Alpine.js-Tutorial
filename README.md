@@ -1,43 +1,107 @@
-# 🚀 Alpine.js Starter
-A lightweight and modern JavaScript framework for adding interactivity directly in your HTML.
+## Alpinejs
 
-## 📦 What is Alpine.js?
-Alpine.js offers you the reactive and declarative nature of big frameworks like Vue or React, but in a much smaller (≈10kB gzipped) package, with no build step required.
+### 🗓️ Day 1: Introduction to Alpine.js
 
-- It’s perfect for:
-- Laravel Blade components
-- Static websites
-- Projects that don’t need a full SPA
-- Enhancing HTML with small bits of interactivity
+- What is Alpine.js?
+- Alpine.js vs jQuery / Vue.js
+- CDN setup and Alpine starter template
+- Syntax overview: x-data, x-init, x-bind, x-on
+- Simple toggle example (x-show with a button)
+- Practice: Create a toggleable FAQ accordion.
 
-## 🛠 Features
-### 🧠 Declarative syntax (x-data, x-model, x-show, etc.)
+### 🗓️ Day 2: Data & Reactivity
 
-### ✨ Features
-- ⚡ Reactive data binding – Automatically update the DOM when data changes.
-- 🪶 Lightweight – Only ~10kB gzipped.
-- 🧩 No build tools required – Works right out of the box via CDN.
-- 🛡️ Tailwind CSS friendly – Designed to integrate seamlessly with Tailwind utility classes.
+Reactive state with x-data
+Binding attributes and text with x-bind and x-text
+Using x-model for two-way binding (inputs)
+x-effect for watching state changes
+Practice: Build a live character counter.
 
-### 🚀 Getting Started
-✅ Include Alpine.js
-```
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-```
-Add this just before your closing </body> tag or in the <head> with defer.
+### 🗓️ Day 3: Event Handling
 
-### ⚙️ Core Directives
-| **Directive**  | **Purpose**                            | **Example**                  |
-| -------------- | -------------------------------------- | ---------------------------- |
-| `x-data`       | Component state                        | `x-data="{ open: true }"`    |
-| `x-model`      | Two-way binding                        | `x-model="inputValue"`       |
-| `x-show`       | Show/hide with CSS                     | `x-show="isVisible"`         |
-| `x-bind` / `:` | Bind attribute to data                 | `:src="imageUrl"`            |
-| `x-on` / `@`   | Handle events                          | `@click="doSomething()"`     |
-| `x-transition` | Animations on show/hide                | `x-show="open" x-transition` |
-| `x-if`         | Conditional rendering (DOM add/remove) | `x-if="condition"`           |
+x-on shorthand (@click, @input, etc.)
+Mouse and keyboard events
+Event modifiers: .prevent, .stop, .once
+Conditional rendering: x-if, x-show
+Practice: Create a basic calculator or click counter.
 
+### 🗓️ Day 4: Looping and Conditional Rendering
 
+Using x-for for loops
+Combining x-if and x-for (gotchas)
+Keys with :key
+Showing and hiding elements with x-show
 
+Practice: Create a to-do list with add/delete functionality.
 
+### 🗓️ Day 5: Lifecycle Hooks
 
+x-init (DOM ready logic)
+$nextTick for DOM updates
+Using x-ref for element references
+Practice: Build a modal that auto-focuses an input field on open.
+
+### 🗓️ Day 6: Alpine Stores (Global State)
+
+Introduction to $store
+Creating and using global stores
+Updating and reacting to store data
+Practice: Theme switcher (dark/light mode) with global state.
+
+### 🗓️ Day 7: Working with Components
+
+Extracting components with <template x-component>
+Passing props using x-bind
+Component reusability
+Practice: Build a custom tab system with reusable components.
+
+### 🗓️ Day 8: Forms and Validation
+
+Two-way data binding with x-model
+Custom form validation logic
+Real-time error messages
+Practice: Build a simple login or registration form with validations.
+
+### 🗓️ Day 9: Transitions and Animations
+
+x-transition directives
+Enter/leave transitions
+Custom duration and easing
+Advanced transition hooks
+Practice: Smooth show/hide of a sidebar or dropdown.
+
+### 🗓️ Day 10: Integrating with APIs (AJAX)
+
+Using fetch with Alpine.js
+Handling loading, error, and success states
+Displaying data from a JSON API
+Practice: Fetch and display user data from a public API.
+
+### 🗓️ Day 11: Alpine Plugins Overview
+
+@alpinejs/persist for localStorage
+@alpinejs/intersect for scroll-based visibility
+@alpinejs/morph for smart DOM patching
+@alpinejs/mask for input masking
+Practice: Create a newsletter form with persistent email input and masked phone number.
+
+### 🗓️ Day 12: Building a Mini Project
+
+Choose a project:
+Modal with form + API
+Weather widget
+Step-by-step wizard
+Combine x-data, x-for, x-model, x-transition, and x-fetch
+
+### 🗓️ Day 13: Debugging & Best Practices
+
+Common issues and how to debug them
+Alpine DevTools (if using with browser extensions)
+Code organization tips
+When to use Alpine.js vs Vue/React
+
+### 🗓️ Day 14: Final Project + Deployment
+
+Build a complete responsive interactive UI (e.g., dashboard or landing page features)
+Use global store, transitions, and API integration
+Deploy using GitHub Pages or Netlify
