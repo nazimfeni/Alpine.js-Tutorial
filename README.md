@@ -11,11 +11,12 @@
 
 ### 🗓️ Day 2: Data & Reactivity
 
-Reactive state with x-data
-Binding attributes and text with x-bind and x-text
-Using x-model for two-way binding (inputs)
-x-effect for watching state changes
-Practice: Build a live character counter.
+- Reactive state with x-data
+- Binding attributes and text with x-bind and x-text
+- Using x-model for two-way binding (inputs)
+- x-effect for watching state changes
+- x-init="$watch('name', value => console.log(name)) 
+- Practice: Build a live character counter.
 
 ### 🗓️ Day 3: Event Handling
 
